@@ -25,7 +25,7 @@ class ViewModel: NSObject {
     }
     
     func titleForCell(atIndexPath indexPath: IndexPath) -> String{
-        guard let movies = movies else {return "1"}
+        guard let movies = movies else {return ""}
         return movies[indexPath.row]
     }
     
