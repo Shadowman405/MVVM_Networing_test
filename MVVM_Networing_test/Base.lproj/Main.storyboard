@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EsA-eE-KCW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EsA-eE-KCW">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EsA-eE-KCW" id="6fb-cM-4iH">
@@ -31,8 +31,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oeU-CK-zWd"/>
+                    <connections>
+                        <outlet property="viewModel" destination="vdt-pd-GHl" id="CzW-JR-dMv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eU-OQ-wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="vdt-pd-GHl" customClass="ViewModel" customModule="MVVM_Networing_test" customModuleProvider="target">
+                    <connections>
+                        <outlet property="networkManager" destination="89d-gh-n25" id="g45-TB-fPV"/>
+                    </connections>
+                </customObject>
+                <customObject id="89d-gh-n25" customClass="NetworkManager" customModule="MVVM_Networing_test" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="862.31884057971024" y="84.375"/>
         </scene>
